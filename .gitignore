@@ -1,0 +1,15 @@
+# Dependency directories
+node_modules/
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/
+dist/
+
+# dotenv environment variables file
+.idea
+.vscode
+.env
+.DS_Store
+.cache
+yarn-error.log
+*.log
