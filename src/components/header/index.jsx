@@ -1,9 +1,9 @@
 // 左侧导航栏组件
 
 import React, {Component} from "react";
-import {withRouter} from 'react-router-dom'
-import {Input, message, Modal, Spin} from "antd"
-import {GithubFilled, HomeOutlined} from '@ant-design/icons';
+import {Link, withRouter} from 'react-router-dom'
+import {Button, Input, Menu, message, Modal, Spin} from "antd"
+import {GithubFilled, HomeOutlined, UserOutlined} from '@ant-design/icons';
 import './index.css'
 
 import menuList from "../../config/menuConfig"
@@ -56,21 +56,31 @@ class Header extends Component {
         const username = memoryUtils.user.UserName
         const title = this.getTitle()
         return (
-            <div className="header">
-                <div className="header-top">
-                    <GithubFilled style={{ fontSize: '20px'}}/>
-                    <span >{username}  </span>
-                    <a href="javascript:" onClick={this.logout}>退出</a>
-                </div>
-                <div className="header-bottom">
-                    <div className="header-bottom-left">
-                        <HomeOutlined style={{ fontSize: '20px', }}/>
-                        <span>
+            <Menu theme="dark">
+                <div className="header">
+                    <div className="header-top">
+                        <a onClick={this.logout}>
+                            <GithubFilled style={{ fontSize: '20px'}}/>
+                            <span>{username}  </span>
+                            {/*<a href="javascript:" onClick={this.logout}>退出</a>*/}
+                        </a>
+                    </div>
+
+                    <div className="header-bottom">
+                        <div className="header-bottom-left" >
+                            <HomeOutlined style={{ fontSize: '20px', }}/>
+                            <span>
                             {title}
                         </span>
+                        </div>
+                        <div className="header-bottom-right">
+
+                            <Search style={{ width: '40vh' }} bordered={true} placeholder="input search text" enterButton="Search" size="middle" loading={false}/>
+                            {/*<Button> 资源查询 </Button>*/}
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Menu>
         )
     }
 }

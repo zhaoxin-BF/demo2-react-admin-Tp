@@ -7,7 +7,7 @@ import {Col, Row} from 'antd';
 import {Card} from "@ucloud-fe/react-components";
 
 // 一、组件类的写法
-export default class Demo2 extends React.Component {
+export default class Monitor extends React.Component {
     state = {
         count: 0,
         options: {
@@ -58,13 +58,13 @@ export default class Demo2 extends React.Component {
             },
         };
         return (
-            <div style={{margin: 15}}>
+                <div style={{ minWidth: '1200px' }}>
                 {/*<p>功能研发中，敬请期待～ {this.state.count} times</p>*/}
                 {/*<button onClick={() => this.setState({ count: this.state.count + 1 })}>*/}
                 {/*    Click me*/}
                 {/*</button>*/}
                 {/*ant-design/charts图表～*/}
-                    <Row gutter={[16,16]}>
+                <Row gutter={[16,16]}>
                     <Col className="gutter-row" span={6}>
                         <Card style={{ bordered:true }}>
                             <Liquid {...configLiquid} />

@@ -5,7 +5,7 @@
 //导入的包
 import React,{Component} from "react";
 import {Redirect, Route, Switch} from "react-router-dom"                 //转发页面
-import { Layout} from 'antd';                            //页面布局
+import {Layout, Card} from 'antd';                            //页面布局
 import memoryUtils from '../../utils/memoryUtils'         //内存数据
 import Header from '../../components/header'
 import LeftNav from '../../components/leftnav'
@@ -17,6 +17,8 @@ import Check from '../check/check'
 import User from '../user/user'
 import {Demo1} from '../dev_demo/demo1/demo1'
 import Demo2 from '../dev_demo/demo2/demo2'
+import Three_demo1 from "../dev_demo/three_demo/index_demo1";
+import Three_demo from "../dev_demo/three_demo/index_demo";
 
 
 //全局变量
@@ -50,23 +52,29 @@ export default class Admin extends Component {
                     </Sider>
                     <Layout >
                         <Header />
-                        <Content style={{margin: 15,
-                            backgroundColor: '#fff'}}>
-                            <Switch>
-                                <Route path='/home' component={Home} />
-                                <Route path='/upload' component={Upload} />
-                                <Route path='/check' component={Check} />
-                                <Route path='/user' component={User} />
+                        <Content style={{overflow: 'auto',background: "#f5f5f5", minWidth: '1200px'}}>
+                            {/*margin: 15*/}
+                            {/*<div style={{ background: "#f5f5f5" }}>*/}
+                                <Switch>
+                                    <Route path='/home' component={Home} />
+                                    <Route path='/upload' component={Upload} />
+                                    <Route path='/check' component={Check} />
+                                    <Route path='/user' component={User} />
 
-                                <Route path='/monitor/monitor' component={Demo1} />
-                                <Route path='/monitor/alarm' component={Demo1} />
-                                <Route path='/monitor/user' component={Demo1} />
+                                    <Route path='/monitor/monitor' component={Demo1} />
+                                    <Route path='/monitor/alarm' component={Demo1} />
+                                    <Route path='/monitor/user' component={Demo1} />
 
-                                <Route path='/setting/auth' component={Demo2} />
-                                <Route path='/setting/system' component={Demo2} />
+                                    <Route path='/setting/auth' component={Demo2} />
+                                    <Route path='/setting/system' component={Demo2} />
 
-                                <Redirect to='/home'/>
-                            </Switch>
+                                    <Route path='/three/business' component={Three_demo} />
+                                    <Route path='/three/userStock' component={Three_demo} />
+                                    <Route path='/three/monitor' component={Three_demo1} />
+
+                                    <Redirect to='/home'/>
+                                </Switch>
+                            {/*</div>*/}
                         </Content>
                         <Footer style={{textAlign: 'center'}}>
                             UGFS ©2022 Created by UDISK SRE

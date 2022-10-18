@@ -10,8 +10,8 @@ yarn start
 # 使用技术栈
 - 1、Tp + react
 - 2、antd 4x 版本组件
-- 3、图表组件1: react-apexcharts
-- 4、图表组件2：@ant-design/charts
+- 3、图表组件1: react-apexcharts（暂不可用）
+- 4、图表组件2：@ant-design/charts（可用）
 - 5、使用函数组件研发+Hooks，抛弃class组件及生命周期函数使用～
 
 # 软件版本

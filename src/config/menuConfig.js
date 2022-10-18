@@ -90,6 +90,29 @@ const menuList = [
             },
 
         ]
+    },
+    {
+        title: '三级路由',
+        key: '/three',
+        icon: <PieChartOutlined/>,
+        children: [ //子菜单列表
+            {
+                title: '业务运维',
+                key: '/three/business',
+                icon: <ContainerOutlined/>
+            },
+            {
+                title: '用户存量',
+                key: '/three/userStock',
+                icon: <DesktopOutlined/>
+            },
+            {
+                title: '历史容量',
+                key: '/three/monitor',
+                icon: <DesktopOutlined/>
+            },
+
+        ]
     }
 ]
 
