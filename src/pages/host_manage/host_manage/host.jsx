@@ -1,9 +1,8 @@
-import {Col, Radio, Row, Tabs} from 'antd';
-import {Card as AntdCart} from 'antd'
-import React, { useState } from 'react';
-import Monitor from "./monitor";
-import Notice from "./notice";
-import {Card} from "@ucloud-fe/react-components";
+import React from "react";
+import {Button, Card, Table, Tabs} from "antd";
+import Monitor from "../../dev_demo/three_demo/monitor";
+import Notice from "../../dev_demo/three_demo/notice";
+
 
 const dataSource = [
     {
@@ -38,12 +37,11 @@ const columns = [
     },
 ];
 
-
-const Three_demo1 = () => {
-    return (
-        <Card.Content >
-             <div>
-                 <Tabs
+const Host = () => {
+    return(
+        <Card style={{ background: "#f5f5f5", minWidth: '1200px'}}>
+            <div>
+                <Tabs
                     defaultActiveKey="1"
                     size={"small"}
                     type={"card"}
@@ -51,20 +49,18 @@ const Three_demo1 = () => {
                         // marginBottom: "42%",
                     }}
                 >
-                    <Tabs.TabPane tab="概览概览" key="1">
-                        <Monitor></Monitor>
+                    <Tabs.TabPane tab="节点列表" key="1">
+                        <Monitor/>
                     </Tabs.TabPane>
-                    <Tabs.TabPane tab="监控监控" key="2">
-                        <AntdCart>
-                            <Notice dataSource={dataSource} columns={columns}></Notice>
-                        </AntdCart>
-                    </Tabs.TabPane>
-                    <Tabs.TabPane tab="告警告警" key="3">
-                        Content of Tab Pane 3
+                    <Tabs.TabPane tab="节点监控" key="2">
+                        <Card>
+                            监控
+                        </Card>
                     </Tabs.TabPane>
                 </Tabs>
             </div>
-        </Card.Content>
+        </Card>
     );
-};
-export default Three_demo1;
+}
+
+export default Host;

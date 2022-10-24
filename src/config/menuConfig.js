@@ -47,7 +47,7 @@ const menuList = [
         icon: <CopyrightCircleOutlined />,
     },
     {
-        title: '资源管理',
+        title: '用户管理',
         key: '/user',
         icon: <UsergroupAddOutlined />,
     },
@@ -112,6 +112,23 @@ const menuList = [
                 icon: <DesktopOutlined/>
             },
 
+        ]
+    },
+    {
+        title: '资源管理',
+        key: '/host',
+        icon: <PieChartOutlined/>,
+        children: [ //子菜单列表
+            {
+                title: '节点管理',
+                key: '/host/server',
+                icon: <ContainerOutlined/>
+            },
+            {
+                title: '硬盘管理',
+                key: '/host/disk',
+                icon: <DesktopOutlined/>
+            },
         ]
     }
 ]

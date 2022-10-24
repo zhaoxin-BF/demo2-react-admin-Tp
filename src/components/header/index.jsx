@@ -56,8 +56,8 @@ class Header extends Component {
         const username = memoryUtils.user.UserName
         const title = this.getTitle()
         return (
-            <Menu theme="dark">
-                <div className="header">
+            <div className="header">
+                <Menu theme="dark">
                     <div className="header-top">
                         <a onClick={this.logout}>
                             <GithubFilled style={{ fontSize: '20px'}}/>
@@ -65,22 +65,22 @@ class Header extends Component {
                             {/*<a href="javascript:" onClick={this.logout}>退出</a>*/}
                         </a>
                     </div>
+                </Menu>
 
-                    <div className="header-bottom">
-                        <div className="header-bottom-left" >
-                            <HomeOutlined style={{ fontSize: '20px', }}/>
-                            <span>
-                            {title}
-                        </span>
-                        </div>
-                        <div className="header-bottom-right">
+                <div className="header-bottom">
+                    <div className="header-bottom-left" >
+                        <HomeOutlined style={{ fontSize: '20px', }}/>
+                        <span>
+                        {title}
+                    </span>
+                    </div>
+                    <div className="header-bottom-right">
 
-                            <Search style={{ width: '40vh' }} bordered={true} placeholder="input search text" enterButton="Search" size="middle" loading={false}/>
-                            {/*<Button> 资源查询 </Button>*/}
-                        </div>
+                        <Search style={{ width: '40vh' }} bordered={true} placeholder="input search text" enterButton="Search" size="middle" loading={false}/>
+                        {/*<Button> 资源查询 </Button>*/}
                     </div>
                 </div>
-            </Menu>
+                </div>
         )
     }
 }

@@ -19,6 +19,9 @@ import {Demo1} from '../dev_demo/demo1/demo1'
 import Demo2 from '../dev_demo/demo2/demo2'
 import Three_demo1 from "../dev_demo/three_demo/index_demo1";
 import Three_demo from "../dev_demo/three_demo/index_demo";
+import Host from "../host_manage/host_manage/host";
+import Disk from "../host_manage/disk_manage/disk";
+import HomeChart from "../home/homeChart";
 
 
 //全局变量
@@ -56,7 +59,7 @@ export default class Admin extends Component {
                             {/*margin: 15*/}
                             {/*<div style={{ background: "#f5f5f5" }}>*/}
                                 <Switch>
-                                    <Route path='/home' component={Home} />
+                                    <Route path='/home' component={HomeChart} />
                                     <Route path='/upload' component={Upload} />
                                     <Route path='/check' component={Check} />
                                     <Route path='/user' component={User} />
@@ -71,6 +74,9 @@ export default class Admin extends Component {
                                     <Route path='/three/business' component={Three_demo} />
                                     <Route path='/three/userStock' component={Three_demo} />
                                     <Route path='/three/monitor' component={Three_demo1} />
+
+                                    <Route path='/host/server' component={Host} />
+                                    <Route path='/host/disk' component={Disk} />
 
                                     <Redirect to='/home'/>
                                 </Switch>

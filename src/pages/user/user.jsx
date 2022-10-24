@@ -187,7 +187,8 @@ export default class User extends Component{
             size:'small',
         }
         return (
-            <Spin spinning={this.state.loading} >
+            <Card style={{ background: "#f5f5f5", minWidth: '1200px'}}>
+                <Spin spinning={this.state.loading} >
                 <Card style={{display:this.state.display}} bordered={false} type='inner' title="所有用户">
                     <Table
                         bordered
@@ -199,6 +200,7 @@ export default class User extends Component{
                     />
                 </Card>
             </Spin>
+            </Card>
         )
     }
 }
